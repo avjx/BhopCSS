@@ -1,6 +1,11 @@
 #include <iostream>
 #include <windows.h>
 
+bool IsGameInFocus() {
+    HWND gameWindow = FindWindow(NULL, "Counter-Strike Source"); // Change this to the exact window title of the game
+    return GetForegroundWindow() == gameWindow;
+}
+
 void BhopThread() {
     AllocConsole();
     FILE* f;
@@ -18,7 +23,7 @@ void BhopThread() {
         if (GetAsyncKeyState(VK_END) & 1) {
             break;
         }
-        if (GetAsyncKeyState(VK_SPACE)) {
+        if (IsGameInFocus() && GetAsyncKeyState(VK_SPACE)) {
             if (*(int*)air == 0) {
                 *(int*)jump = 5;
                 Sleep(10);
