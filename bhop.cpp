@@ -2,7 +2,7 @@
 #include <windows.h>
 
 bool IsGameInFocus() {
-    HWND gameWindow = FindWindow(NULL, "Counter-Strike Source"); // Change this to the exact window title of the game
+    HWND gameWindow = FindWindow(NULL, "Counter-Strike Source");
     return GetForegroundWindow() == gameWindow;
 }
 
