@@ -18,7 +18,7 @@ The DLL intercepts keyboard input and simulates jump commands when the player is
 
 ## Compilation
 
-1. Install MinGW from [here](http://www.mingw.org/).
+1. Install MinGW.
 2. Add MinGW's `bin` directory to your system's PATH (e.g., `C:\MinGW\bin`).
 3. Clone this repository or download the files.
 4. Open a terminal or command prompt in the directory containing `bhop.cpp`.
